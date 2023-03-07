@@ -10,13 +10,16 @@
             background-color: gray;
             margin: 10px;
             padding: 20px;
-            border: 3px solid red;
-            weight: 100px;
+            border: 5px solid red;
+            width: 100px;
             height: 200px;
-            box-sizing: border-box;
+            box-sizing: content-box;
         }
         span {
             background-color: aqua;
+        }
+        .div_3 {
+            box-shadow: 10px 10px 15px 5px #000 inset;
         }
     </style>
 </head>
@@ -26,6 +29,6 @@
     <br>
     <br>
 
-    <span>스판</span>
+    <div class="div_3">박스 모델(그림자 효과)</div>
 </body>
 </html>
