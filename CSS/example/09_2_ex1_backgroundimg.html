@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div_img {
+            background-image: url('./css/image1.JPG'), url('./css/image.JPG');
+            width: 500px;
+            height: 500px;
+        }
+        .div_repeat {
+            background-image: url('./css/image1.JPG');
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            background-repeat: repeat;
+        }
+        /* body {
+            
+            background-image: url('./css/image.JPG');
+        } */
+        .div_position {
+            border: 1px solid black;
+            width: 1000px;
+            height: 600px;
+            background-image: url('./css/image1.JPG');
+            background-repeat: no-repeat;
+            /* background-position: bottom 100px right 50px; */
+            background-size: contain;
+        }
+        .div_img_scroll {
+            background-image: url('./css/image1.JPG');
+            background-attachment: scroll;
+            
+        }
+        .div_img_fixed {
+            
+            background-attachment: fixed;
+            
+        }
+        .div_img_local {
+            
+            background-attachment: local;
+            
+        }
+        .at_img {
+            background-image: url('./css/image1.JPG');
+            width: 150px;
+            height: 200px;
+            display: inline-block;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>background imnage</h1>
+    <div class="div_img"></div>
+
+    <h1>background repeat</h1>
+    <div class="div_repeat"></div>
+    <h1>background position</h1>
+    <div class="div_position"> -->
+    <div style="height: 1000px;"></div>
+    <div class="div_img_scroll at_img">
+        문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인
+    </div>
+    <div class="div_img_fixed at_img">
+        문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 문명이 출현하면서 사회집단 또는 부족에 따라서 문명이 출현하면서 사회집단 또는 부족에 따라서 문명이 출현하면서 사회집단 또는 부족에 따라서 
+    </div>
+    <div class="div_img_local at_img">
+        문명이 출현하면서 사회집단 또는 부족에 따라서 전통적인문명이 출현하면서 사회집단 또는 부족에 따라서 문명이 출현하면서 사회집단 또는 부족에 따라서 문명이 출현하면서 사회집단 또는 부족에 따라서 
+    </div>
+</body>
+</html>

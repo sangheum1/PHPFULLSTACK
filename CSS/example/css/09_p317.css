@@ -1,0 +1,43 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    padding-left: 20px;
+    
+}
+.container {
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    padding-top: 20px;
+    background-image: url('../example/css/image1.JPG');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 400px 300px;
+    margin: 0px auto;
+}
+.list_1 {
+    list-style-type: none;
+    padding-left: 20px;
+}
+.title_1 {
+    background-color: green;
+    color: white;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    margin: 20px auto;
+}
+.title_2 {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    margin: 20px auto;
+    
+}
+.text {
+    color: red;
+}
+.title_3 {
+    padding-left: 20px;
+}
