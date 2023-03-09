@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            :link
+            :visited
+            :hover
+            :active
+            :focus
+        */
+
+        a:link {
+            color: aqua;
+        }
+        a:visited {
+            color: yellowgreen;
+        }
+        .main {
+            list-style-type: none;
+            color: brown;
+            
+            
+        }
+        li {
+            float: left;
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            height: 20px;
+        }
+
+        input:focus {
+            border: 3px solid purple;
+            outline: none;
+        }
+
+        a:active {
+            background-color: aqua;
+        }
+        #target_1:target {
+            background-color: burlywood;
+        }
+        div :nth-child(even) {
+            background-color: yellow;
+        }
+
+        div h2:nth-of-type(2) {
+            background-color: green;
+        }
+        div :not(p) {
+            background-color: purple;
+        }
+        .container_2 .pf_1::first-letter {
+            background-color: cornflowerblue;
+        }
+        .container_2 .pf_2::first-line {
+            background-color: orange;
+        }
+        .pf_1>span::before {
+            content: '중요';
+            color: red;
+        }
+        .pf_2>span::after {
+            content: '중요';
+            color: red;
+        }
+        .container_2 p::selection {
+            background-color: cadetblue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>가상요소</legend>
+        <div class="container_2">
+            <h2>h2_1</h2>
+            <p class="pf_1">문명이 출현하면서 <span>사회집단</span> 또는 부족에 따라서 전통적인 요리법이 정착
+                되기 시작했다. 기후, 토양, 동물 분포와 같은 지역적인 요인에 따라서 
+                서로 다른 전통이 만들어졌다. 사람들이 얼마나 청결한 것을 좋아하는가와 
+                자신들의 사회구조를 지키기 위해서 어떤 종교적 금기를 지키는가에 따라
+            </p>
+            <p class="pf_2">문명이 출현하면서 <span>사회집단</span> 또는 부족에 따라서 전통적인 요리법이 정착
+                되기 시작했다. 기후, 토양, 동물 분포와 같은 지역적인 요인에 따라서 
+                서로 다른 전통이 만들어졌다. 사람들이 얼마나 청결한 것을 좋아하는가와 
+                자신들의 사회구조를 지키기 위해서 어떤 종교적 금기를 지키는가에 따라
+            </p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>구조 가상 클래스</legend>
+        <div class="container">
+            <h2>h2_1</h2>
+            <p>p_1</p>
+            <p>p_2</p>
+            <h2>h2_1</h2>
+            <p>p_3</p>
+        </div>
+    </fieldset>
+
+    <a href="https://naver.com">naver</a>
+    <br>
+    <nav>
+        <ul class="main">
+            <li><a href="#target_1">메뉴1</a></li>
+            <li><a href="https://naver.com">메뉴2</a></li>
+            <li><a href="https://naver.com">메뉴3</a></li>
+            <li><a href="https://naver.com">메뉴4</a></li>
+        </ul>
+    </nav>
+    <br><br><br>
+    <span id="target_1">target 테스트</span>
+    <br><br>
+
+    <label for="input_1">이름</label>
+    <input type="text" id="input_1">
+</body>
+</html>

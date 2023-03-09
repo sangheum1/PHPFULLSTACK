@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            margin: 0 20% auto;
+        }
+        fieldset {
+            width: 600px;
+            height: 380px;
+            background-image: url(../example/css/image1.JPG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        legend {
+            font-size: 2em;
+            color: #b13046;
+        }
+        .request {
+            float: left;
+        }
+        textarea {
+            
+            margin: 5px;
+            background-color: transparent;
+        }
+        
+        span::before {
+            content: '*';
+            color: red;
+        }
+        input:focus {
+            border: 3px solid red;
+            outline: none;
+        }
+        textarea:focus {
+            border: 3px solid red;
+            outline: none;
+        }
+        
+        #submit_1 {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            
+        }
+        #name, #age {
+            background-color: transparent;
+            
+        }
+        #gen_1:checked + label {
+            color: red;
+        }
+        #gen_2:checked + label {
+            color: red;
+        }
+        #submit_title {
+            display: none;
+            font-size: 20px;
+            font-weight: 900;
+            width: auto;
+            color: white;
+            background-color: black;
+            position: absolute;
+            bottom: 3px;
+            left: 15%;
+        }
+        button:hover + #submit_title {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>I want YOU!</legend>
+            <ul>
+                <li>
+                    <p><label for="name"><span>이름</span></label>
+                    <input type="text" id="name" required></p>
+                <li>
+                    <p><label for="age"><span>나이</span></label>
+                    <input type="number" id="age" required min="20"></p>
+                </li>
+                <li>
+                    <p><label for="gen"><span>성별</span></label>
+                    
+                    <input type="radio" id="gen_1" name="gen" required>
+                    <label for="gen_1">남자</label>
+                    
+                    <input type="radio" id="gen_2" name="gen">
+                    <label for="gen_2">여자</label></p>
+                    
+                </li>
+            </ul>
+            <p class="request"><label for="memo">요청사항 </label></p>
+            <textarea name="" id="memo" cols="40" rows="10" placeholder="요청 사항 입력"></textarea>
+            
+            
+            <button type="submit" id="submit_1">보내기</button>
+            <p id="submit_title">내용을 다시 한번 확인해 주세요</p>
+
+        </fieldset>
+    </form>
+</body>
+</html>
