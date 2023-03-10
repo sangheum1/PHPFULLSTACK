@@ -1,0 +1,18 @@
+@media (max-width: 500px){
+    p {
+        background-color: red;
+    }
+}
+@media (min-width: 501px) and (max-width: 700px){
+    p {
+        background-color: blue;
+    }
+}
+@media (min-width: 701px){
+    p {
+        background-color: green;
+    }
+}
+/* @media 값들을 저장한 css를 import로 불러오고 import는 다시 html에서 link로
+불러오기
+@import url(./06_2_ex1.css); */

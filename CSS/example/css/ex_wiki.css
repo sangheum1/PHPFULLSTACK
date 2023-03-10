@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+}
+.container_1 {
+    flex-direction: column;
+    
+    margin: 50px;
+}
+.list_1 {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    
+}
+.list_2 {
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+}
+article {
+    width: 600px;
+    height: 100px;
+    border: 1px solid black;
+    line-height: center;
+    padding: 10px;
+}
+h2 {
+    color: #4242d8;
+}
+section {
+    padding: 0;
+}
