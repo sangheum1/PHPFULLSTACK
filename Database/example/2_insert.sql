@@ -19,3 +19,6 @@ VALUES
 SELECT *
 FROM employees
 WHERE emp_no=500000;
+
+ROLLBACK;
+SELECT @@autocommit;
