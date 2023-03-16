@@ -24,3 +24,49 @@ SELECT
 		ELSE '팀원'
 	END AS 'k_title'
 FROM titles;
+
+--문자열 함수--
+SELECT CONCAT('안녕하세요 ', '좋은아침입니다.');
+SELECT CONCAT_WS('/', 'a', 'b');
+
+INSERT INTO employees (
+	emp_no
+	, birth_date
+	, first_name
+	, last_name
+	, gender
+	, hire_date
+)
+VALUES (
+	500000
+	, NOW()
+	, 'sangheum'
+	, 'yun'
+	, 'M'
+	, NOW()
+);
+
+SELECT CONCAT(first_name, ' ', last_name)
+FROM employees
+WHERE emp_no=500000;
+
+SELECT FORMAT(1234, 2);
+
+SELECT LPAD('956', 6, '0');
+
+SELECT SUBSTRING('abcdef', 2, 4);
+
+SELECT SUBSTRING_index('ab.cd.ef.g', '.', 2);
+
+SELECT TRUNCATE(2, 1.11);
+
+SELECT TRUNCATE(1.11, 2);
+
+SELECT DATE(NOW());
+
+SELECT ADDDATE(NOW(), INTERVAL 1 MONTH);
+
+SELECT ADDTIME(NOW(), '-1:1:1');
+
+SELECT emp_no, RANK() over(ORDER BY salary ASC)
+FROM salaries;
