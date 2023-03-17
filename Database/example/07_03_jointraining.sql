@@ -63,6 +63,15 @@ WHERE emp2.title= 'staff'
 GROUP BY emp1.emp_no
 ;  
 
+SELECT avg(emp1.salary)
+FROM salaries emp1
+	INNER JOIN titles emp2
+	ON emp1.emp_no = emp2.emp_no
+WHERE emp2.title= 'staff'
+	AND emp2.to_date = DATE(99990101)
+	AND emp1.to_date = DATE(99990101)
+;  
+
 
 SELECT emp1.emp_no, avg(emp1.salary)
 FROM salaries emp1
@@ -78,7 +87,16 @@ SELECT emp2.first_name, emp2.last_name, emp1.from_date, emp2.emp_no, emp1.dept_n
 FROM dept_manager emp1
 	INNER JOIN employees emp2
 	ON emp1.emp_no = emp2.emp_no
-;  
+;
+
+SELECT CONCAT(last_name, ' ', first_name) fullname
+			, hire_date
+			, emp.emp_no
+			, d_m.dept_no
+FROM employees emp
+	INNER JOIN dept_manager d_m
+	ON emp.emp_no = d_m.emp_no
+WHERE d_m.to_date < DATE(99990101);
 
 
 --현재 각 직급별 평균월급 중 60000원 이상인 직급의 직급명 평균월급(정수)를 내림차순으로 출력9번)--
@@ -112,6 +130,14 @@ FROM employees emp
 GROUP BY tit.title
 ;
 
+SELECT tit.title, COUNT(*), emp.gender
+FROM employees emp
+	INNER JOIN titles tit
+	ON tit.emp_no = emp.emp_no
+	WHERE emp.gender = 'F'
+	AND tit.to_date = DATE(99990101)
+GROUP BY tit.title
+;
 
 
 
