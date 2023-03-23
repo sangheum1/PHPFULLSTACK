@@ -15,33 +15,64 @@
     //         break;
     // }
 
-    $num =755;
+    // $num =100;
+    // $text_1 = "당신의 점수는 ";
+    // $text_2 = "점 입니다 ";
+
+    // switch ($num) {
+    //     case $num>100 || $num<0:
+    //         echo "잘못된 값을 입력하셨습니다";
+    //         break;
+    //     default:
+    //         switch ($num) {
+    //             case $num == 100:
+    //                 echo $text_1.$num.$text_2."<A+>";
+    //                 break;
+    //             case $num >= 90:
+    //                 echo $text_1.$num.$text_2."<A>";
+    //                 break;
+    //             case $num >= 80:
+    //                 echo $text_1.$num.$text_2."<B>";
+    //                 break;
+    //             case $num >= 70:
+    //                 echo $text_1.$num.$text_2."<C>";
+    //                 break;
+    //             case $num >= 60:
+    //                 echo $text_1.$num.$text_2."<D>";
+    //                 break;
+    //             default:
+    //                 echo $text_1.$num.$text_2."<F>";
+    //                 break;
+    //         }
+    // }
+
+    $num =90;
+    $text_1 = "당신의 점수는 ";
+    $text_2 = "점 입니다 ";
 
     switch ($num) {
-        case $num>100 || $num<0:
-            echo "잘못된 값을 입력하셨습니다";
-            break;
-        default:
+        case 100 || 90 || 80 || 70 || 60: {
             switch ($num) {
-                case $num == 100:
-                    echo "당신의 점수는 $num 점 입니다 <A+>";
+                case 100:
+                    echo $text_1.$num.$text_2."<A+>";
                     break;
-                case $num >= 90:
-                    echo "당신의 점수는 $num 점 입니다 <A>";
+                case 90:
+                    echo $text_1.$num.$text_2."<A>";
                     break;
-                case $num >= 80:
-                    echo "당신의 점수는 $num 점 입니다 <B>";
+                case 80:
+                    echo $text_1.$num.$text_2."<B>";
                     break;
-                case $num >= 70:
-                    echo "당신의 점수는 $num 점 입니다 <C>";
-                    break;
-                case $num >= 60:
-                    echo "당신의 점수는 $num 점 입니다 <D>";
+                case 70:
+                    echo $text_1.$num.$text_2."<C>";
                     break;
                 default:
-                    echo "당신의 점수는 $num 점 입니다 <F>";
+                    echo $text_1.$num.$text_2."<D>";
                     break;
             }
+        }
+        default:
+        echo "잘못된 값을 입력하셨습니다";
+        break;
     }
 
 ?>
