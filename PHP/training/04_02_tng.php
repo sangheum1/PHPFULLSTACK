@@ -62,11 +62,28 @@
 
 $num=4;
 for($j=$num; $j>0; $j--){
+    for($k=$j; $k<=$num; $k++){
+        echo " ";
+    }
+    
     for ($i=$j; $i>0; $i--) {
         echo "*";
     }
     echo "\n";
 }
+
+// $num=4;
+
+// for($j=$num; $j>0; $j--){
+//     for($j=$num; $j>0; $j--) {
+        
+        
+//         for ($i=$j; $i>0; $i--) {
+//             echo "*";
+//         }
+//         echo "\n";
+//     }
+// }
 
 
 
