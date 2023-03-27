@@ -43,6 +43,9 @@ $arr_week = array("sun", "mon", "delete", "tue", "wed");
 unset($arr_week[2]);
 print_r($arr_week);
 
-
+//fsdfsfsfsfdsf
+$arr_week = array("sun", "mon", "delete", "tue", "wed");
+unset($arr_week[2]);
+print_r($arr_week);
 
 ?>
