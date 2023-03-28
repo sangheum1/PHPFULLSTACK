@@ -39,13 +39,13 @@
 //     echo "\n".$j=$j.$i;
 // }
 
-// $num=5;
-// for ($j=1; $j<=$num; $j++) {
-//     for ($i=1; $i<=$j; $i++) {
-//         echo "*";
-//     }
-//     echo "\n";
-// }
+$num=5;
+for ($j=1; $j<=$num; $j++) {
+    for ($i=1; $i<=$j; $i++) {
+        echo "*";
+    }
+    echo "\n";
+}
 
 // $num=4;
 // for ($i=1; $i<=$num; $i++) {
@@ -60,17 +60,17 @@
 //     echo "\n";
 // }
 
-$num=4;
-for($j=$num; $j>0; $j--){
-    for($k=$j; $k<=$num; $k++){
-        echo " ";
-    }
+// $num=4;
+// for($j=$num; $j>0; $j--){
+//     for($k=$j; $k<=$num; $k++){
+//         echo " ";
+//     }
     
-    for ($i=$j; $i>0; $i--) {
-        echo "*";
-    }
-    echo "\n";
-}
+//     for ($i=$j; $i>0; $i--) {
+//         echo "*";
+//     }
+//     echo "\n";
+// }
 
 // $num=4;
 

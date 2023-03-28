@@ -32,25 +32,35 @@ $arr_ass = array("짬뽕"=>"밀가루"
                 , "붕어빵"=>"팥");
 
 // foreach문을 이용하여 키가 삭제인 요소를 제거해 주세요
+// foreach($arr_ass as $key => $val){
+//     if( $key === "짬뽕" ) {
+//         echo $key." : ".$val;
+//     }
+//     else if ($key === "볶음밥") {
+//         echo $key." : ".$val;
+//     }
+//     else if ($key === "삭제") {
+//         unset($arr_ass[$key]);
+//     }
+//     else if ($key === "탕수육") {
+//         echo $key." : ".$val;
+//     }
+//     else {
+//         echo $key." : ".$val;
+//     }
+// }
+// var_dump($arr_ass);
+
 foreach($arr_ass as $key => $val){
-    if( $key === "짬뽕" ) {
-        echo $key." : ".$val;
-    }
-    else if ($key === "볶음밥") {
-        echo $key." : ".$val;
-    }
-    else if ($key === "삭제") {
+    if( $key === "삭제" ) {
         unset($arr_ass[$key]);
     }
-    else if ($key === "탕수육") {
-        echo $key." : ".$val;
-    }
     else {
-        echo $key." : ".$val;
+        echo $key." : ".$val."\n";
     }
 }
-var_dump($arr_ass);
 
+var_dump($arr_ass);
 
 
 ?>
