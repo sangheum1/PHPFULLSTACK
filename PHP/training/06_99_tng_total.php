@@ -66,11 +66,6 @@
 //     }
 //     echo "\n";
 // }
-// // star(1);
-// // star(2);
-// // star(3);
-// // star(4);
-// // star(5);
 
 // function star_react($int_1) {
 //     for ($i=1; $i<=$int_1; $i++) {
@@ -84,34 +79,95 @@
 
 
 
-function star($int) {    
-    for ($i=1; $i<=$int; $i++) {
-        echo "*";
-    }
-    echo "\n";
-}
+// function star($int) {    
+//     for ($i=1; $i<=$int; $i++) {
+//         echo "*";
+//     }
+//     echo "\n";
+// }
 
 
 
-function star_react($int_1) {
-    for ($i=1; $i<=$int_1; $i++)
-    star(3);
-
-}
-
-
-
-echo star_react(4);
-// ***
-// ***
-// ***
+// function star_react($int_1) {
+//     for ($i=1; $i<=$int_1; $i++){
+//     star(3);
+//     }
+// }
 
 
 
+// echo star_react(6);
+
+// function star($int) {    
+//     for ($i=1; $i<=2*$int-1; $i++) {
+//         echo "*";
+//     }
+//     echo "\n";
+// }
+
+// function star_react($int_1) {
+//     for ($i=1; $i<=$int_1; $i++) {
+//         star($i);
+//     }
+// }
+
+// function star_blank($int_1) {
+//     for ($j=$int_1; $j>0; $j++) {
+//         echo " ";
+//     }
+// }
+
+// echo star_react(4);
+
+// while 언제 멈춰야 할지 알때쓰고 for문은 몇번 반복해야하는지 알때
+
+
+
+// foreach ($arr as $key => $val) {
+//     echo $key.">".$val."\n";
+// }
+
+
+// $arr = array(5, 10, 7, 3, 1);
+// for ($i=0; $i <= 4; $i++) {
+//     echo $i." > ".$arr[$i]."\n";
+// }
+
+
+// $temp=$arr[0];
+// $arr[0]=$arr[1];
+// $arr[1]=$temp;
+
+// print_r($arr);
+
+// for ($i=0; $i < count($arr); $i++) {
+//     for ($i=0; $arr[$i] > $arr[$i+=1] && $i < count($arr); $arr[$i++]) {
+//     $temp=$arr[$i];
+//     $arr[$i]=$arr[$i+=1];
+//     $arr[$i+=1]=$temp;
+//     }
+// }
+// $arr = array(5, 10, 7, 3, 1);
+// for ($i=0; $i < count($arr)-1; $i++) {
+//     $temp=0;
+//     if ($arr[$i] > $arr[$i+=1]) {
+//         $temp=$arr[$i];
+//         $arr[$i]=$arr[$i+=1];
+//         $arr[$i+=1]=$temp;
+//     }
+    
+//     }
+// var_dump($arr);
 
 
 
 
+// for ($i=0; $arr[$i] > $arr[$i+=1] && $i <= count($arr)-1; $i++) {
+//     $temp=$arr[$i];
+//     $arr[$i]=$arr[$i+=1];
+//     $arr[$i+=1]=$temp;
+//     }
+// var_dump($arr);
 
 
 ?>

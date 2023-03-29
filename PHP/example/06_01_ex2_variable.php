@@ -50,18 +50,35 @@
 
 // echo $int_a." ".$int_b;
 
-// call by reference
-function fnc_val(&$a,&$b) {
-    $a = 3;
-    $b = 4;
-}
+// call by reference (참조)
+// function fnc_val(&$a,&$b) {
+//     $a = 3;
+//     $b = 4;
+// }
 
-$int_a = 1;
-$int_b = 2;
-fnc_val($int_a,$int_b);
+// $int_a = 1;
+// $int_b = 2;
+// fnc_val($int_a,$int_b);
 
-echo $int_a." ".$int_b;
+// echo $int_a." ".$int_b;
 
+// return 함수 (리턴 값이 있는)
+// function sum2($n1, $n2) {
+//     return $n1+$n2;      // 9의 값을 가지고 나오는 것임
+// }
+// sum2(3,6); => sum2(3,6) 그 자체가 9가 된다.
+
+// return 함수 (리턴값이 없는)
+// function sum($n1,$n2) {
+//     echo $n1+$n2;
+//     return;                 // 값을 안가지고 그냥 빠져 나오는 것임
+// }
+// var_dump(sum(1,2));     // null을 가지게 된다.
+
+
+// while 언제 멈춰야 할지 알때쓰고 for문은 몇번 반복해야하는지 알때
+
+// array 정렬 방법 array(5 10 7 3 1) => 버블 정렬은 1 3 5 7 10
 
 
 
