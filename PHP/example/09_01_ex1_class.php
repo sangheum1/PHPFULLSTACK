@@ -36,10 +36,10 @@ class Student {
 // class를 초기화
 $obj_student = new Student;
 // class의 method를 호출
-$obj_student->print_student("홍길동", 27);
+// $obj_student->print_student("홍길동", 27);
 // class의 멤버변수 사용방법
-$obj_student->std_name = "갑돌이";
-echo $obj_student->std_name;
+// $obj_student->std_name = "갑돌이";
+// echo $obj_student->std_name;
 
 // 지시자가 private인 경우엔 class 내에서 선언 해야하고 외부에선 안됨
 // $obj_student->$std_id = "갑순이";   => 외부선언이라 안됨
@@ -48,6 +48,33 @@ echo $obj_student->std_name;
 // getter,setter로 private 접근하는 방법(class student 내에서 함수 만들어서 사용)
 // $obj_student->set_std_id("갑순이id");
 // echo $obj_student->get_std_id();
+
+
+
+// 생성자(constructor)
+class food
+{
+    private $food_name;
+
+    // 생성자
+    public function __construct($param_food_name)
+    {
+        $this->food_name = $param_food_name;
+    }
+
+    public function print_food_name()
+    {
+        echo $this->food_name;
+    }
+}
+
+$obj_food = new food("탕수육");
+$obj_food->print_food_name();
+
+
+
+
+
 
 
 ?>
