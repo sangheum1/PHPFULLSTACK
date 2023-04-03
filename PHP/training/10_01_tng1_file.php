@@ -8,21 +8,21 @@
 // ..
 // 2*9 = 18
 
-$f_gugudan = fopen("../example/sam/gugudan.txt", "a");
+// $f_gugudan = fopen("../example/sam/gugudan.txt", "a");
 
-// // 문자열을 초기화 할땐 "" 이렇게 초기화 시키고 null값을 넣는건 class 선언하거나 그런 object경우엔 null 선언
-$print_gugudan="";
-for($dan=2; $dan<=9; $dan++)
-{
-    $print_gugudan .= $dan."단\n";
-    for( $num=1; $num <=9; $num++)
-    {
-        $result = $dan." * ".$num." = ".$dan*$num."\n";
-        $print_gugudan .= $result;     // .=은 기존에 있던 문자열에 그값만 추가해주는것
-    }
-}
-fputs($f_gugudan, $print_gugudan);
-fclose($f_gugudan);
+// // // 문자열을 초기화 할땐 "" 이렇게 초기화 시키고 null값을 넣는건 class 선언하거나 그런 object경우엔 null 선언
+// $print_gugudan="";
+// for($dan=2; $dan<=9; $dan++)
+// {
+//     $print_gugudan .= $dan."단\n";
+//     for( $num=1; $num <=9; $num++)
+//     {
+//         $result = $dan." * ".$num." = ".$dan*$num."\n";
+//         $print_gugudan .= $result;     // .=은 기존에 있던 문자열에 그값만 추가해주는것
+//     }
+// }
+// fputs($f_gugudan, $print_gugudan);
+// fclose($f_gugudan);
 
 
 // for($j=2; $j<=9; $j++)

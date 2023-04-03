@@ -50,7 +50,6 @@ if (!$flg_cnt)
 
 
 
-
 mysqli_close($dbc);
 
 
