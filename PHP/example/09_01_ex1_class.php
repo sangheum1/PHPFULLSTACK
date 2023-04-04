@@ -62,7 +62,7 @@ class food
         $this->food_name = $param_food_name;
     }
 
-    public function print_food_name()
+    public function print_food_name()     //  생성자에 탕수육이 들어갔나 찍어보기 위해 만든것
     {
         echo $this->food_name;
     }

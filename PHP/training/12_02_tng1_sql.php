@@ -11,7 +11,7 @@ include_once("../example/12_02_ex2_fnc_dbfunction.php");
 $obj_conn = null; // pdo class => 클래스 설정값을 받기 위해 초기화 시키고 시작
 
 // db connect
-my_db_conn( $obj_conn );
+my_db_conn( $obj_conn ); // 함수가 어딨는지 확인 ctrl+함수 누르기(함수에서 돌아오려면 alt+화살표 왼쪽)
 
 $sql =
     " SELECT "
@@ -19,8 +19,13 @@ $sql =
     ." FROM "
     ." salaries ";
 
-$stmt = $obj_conn->prepare($sql);
-$stmt->execute();
+// $stmt = $obj_conn->prepare($sql);
+// $stmt->execute();
+// $result = $stmt->fetchall();
+// var_dump($result);
+
+// prepare로 질의 하지 않고 그냥 바로 쿼리 적는 방법(array_prepare을 쓸 필요가 없어서 바로 쿼리작성)
+$stmt = $obj_conn->query($sql);
 $result = $stmt->fetchall();
 var_dump($result);
 
@@ -50,14 +55,15 @@ $obj_conn = null; // db connection 파기
 
 // $arr_prepare = 
 //     array(
-//         ":emp_no" => "500000"
+//         ":emp_no"      => "500000"
 //         ,":birth_date" => "1997-09-14"
 //         ,":first_name" => "Yun"
-//         ,":last_name" => "sangheum"
-//         ,":gender" => "M"
-//         ,":hire_date" => "2000-01-01"
+//         ,":last_name"  => "sangheum"
+//         ,":gender"     => "M"
+//         ,":hire_date"  => "2000-01-01"
 //     );
 
+// $obj_conn = null; // obj_conn값이 존재한 상태에서 null을 시키면 pdo 종료이지만 없는상태면 종료되지 않는다.
 // $stmt = $obj_conn->prepare( $sql );
 // $result = $stmt->execute( $arr_prepare ); // execute는 성공하면 true로 오고 실패하면 false
 // $obj_conn->commit(); // 커밋을 시켜야 데이터 베이스에 저장
@@ -77,10 +83,11 @@ $obj_conn = null; // db connection 파기
 
 // $arr_prepare = 
 //     array(
-//         ":first" => "hong"
-//         ,":last" => "gildong"
-//         ,":emp_no" => 500000
+//         ":first"     => "hong"
+//         ,":last"     => "gildong"
+//         ,":emp_no"   => 500000
 //     );
+// $obj_conn = null;
 // $stmt = $obj_conn->prepare( $sql );
 // $result = $stmt->execute( $arr_prepare ); // execute는 성공하면 true로 오고 실패하면 false
 // $obj_conn->commit(); // 커밋을 시켜야 데이터 베이스에 저장
