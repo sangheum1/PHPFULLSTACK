@@ -9,7 +9,7 @@ class Student {
     // 변수 : 클래스 멤버 변수라고 명명
     public $std_name; // 어디서든 접근(사용) 가능함
     private $std_id; // Student class 내에서만 접근 가능
-    protected $std_age; // 상속 class 내에서만 접근 가능
+    protected $std_age; // class 자기 자신과 상속 class 내에서만 접근 가능
     
 
     // class 안에 있는 function을 method라고 부름
@@ -70,6 +70,9 @@ class food
 
 $obj_food = new food("탕수육");
 $obj_food->print_food_name();
+
+
+// 상속 멤버 변수 (protected) : 부모 클래스의 객체들을 자식 클래스가 상속받아 사용 할 수 있다.
 
 
 
