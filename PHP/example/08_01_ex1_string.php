@@ -77,7 +77,7 @@ sscanf($str_sscanf, "%s %d %s", $str_ko, $int_d, $str_en);  //잘 사용안함
 echo $str_ko, "\n", $int_d, "\n", $str_en, "\n";
 echo str_repeat("가", 3);
 echo "\n";
-// 문자열을 특정 문자열로 분리하는 함수
+// 문자열을 배열의 특정 문자열로 분리하는 함수
 $str_exp1 = "홍길동,27세,남자,의적,조선";
 $arr_exp1 = explode(",", $str_exp1);
 print_r($arr_exp1);
