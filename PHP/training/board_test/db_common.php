@@ -17,11 +17,12 @@ function db_conn()
     $pdo = new PDO($dns, $user, $pass, $pdo_option);
     $stmt = $pdo->prepare( " select * from board_info " );
     $stmt->execute();
-    $result = $stmt->fetch_assoc();
+    $result = $stmt->fetchall();
     var_dump($result);
 }
 
-db_conn();
+// db_conn();
+var_dump($_SERVER);
 
 
 
