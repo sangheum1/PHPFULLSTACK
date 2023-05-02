@@ -1,6 +1,6 @@
 <?php
 
-// while + if 조합된것 
+// while + if 조합된것  
 // $i = 0;
 // while( $i<=4 )
 // {
