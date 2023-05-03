@@ -60,7 +60,7 @@ let arr = [1, 2, 3, 4];
 //     console.log( i + arr[i] );
 // }
 
-// for...of : i가 value값 출력 => key가 기본상태인 index 배열만 console에 찍히고 키를 지정하고 값을 추가한 것은 console 에서 안 나옴
+// for...of : i가 value값 출력 => key가 기본상태인 index 배열만 console에 찍히고 키를 지정하고 값을 추가한 것은 console 에서 안 나옴( symbol 이터레이터가 (index로) 부여 되어야 출력되고 그게 아니면 출력x) =>34장
 arr = [5, 4, 3, 2];
 arr.num = 2;
 
