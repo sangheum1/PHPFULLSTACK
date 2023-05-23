@@ -149,3 +149,27 @@ Route::get('/makesign', function() {
 Route::get('/sign', function() {
     return "Sign!!";
 })->name('sign')->middleware('signed');
+
+// ------------------------
+// 컨트롤러
+// ------------------------
+// 커맨드로 컨트롤러 생성 : php artisan make:controller TestController
+use App\Http\Controllers\TestController;
+Route::get('/test', [TestController::class, 'index'])->name('tests.index');
+
+
+// 커맨드로 컨트롤러 생성 : php artisan make:tasksController --resource
+use App\Http\Controllers\TasksController;
+Route::resource('/tasks', TasksController::class);
+// 목록 불러오는 커맨드 : php artisan route:list
+// GET|HEAD        tasks ................................................ tasks.index › TasksController@index  
+// POST            tasks ................................................ tasks.store › TasksController@store  
+// GET|HEAD        tasks/create ......................................... tasks.create › TasksController@create  
+// GET|HEAD        tasks/{task} ......................................... tasks.show › TasksController@show  ref) {}은 값을 아무거나 입력(보통 숫자)
+// PUT|PATCH       tasks/{task} ......................................... tasks.update › TasksController@update  
+// DELETE          tasks/{task} ......................................... tasks.destroy › TasksController@destroy  
+// GET|HEAD        tasks/{task}/edit .................................... tasks.edit › TasksController@edit
+
+
+use App\Http\Controllers\BladeController;
+Route::get('blade', [BladeController::class, 'index'])->name('blade.index');
