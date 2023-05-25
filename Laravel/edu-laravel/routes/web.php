@@ -158,7 +158,7 @@ use App\Http\Controllers\TestController;
 Route::get('/test', [TestController::class, 'index'])->name('tests.index');
 
 
-// 커맨드로 컨트롤러 생성 : php artisan make:tasksController --resource
+// 커맨드로 컨트롤러 생성 : php artisan make:controller TasksController --resource    => controller 안에 메소드들 생성
 use App\Http\Controllers\TasksController;
 Route::resource('/tasks', TasksController::class);
 // 목록 불러오는 커맨드 : php artisan route:list
@@ -172,4 +172,7 @@ Route::resource('/tasks', TasksController::class);
 
 
 use App\Http\Controllers\BladeController;
-Route::get('blade', [BladeController::class, 'index'])->name('blade.index');
+Route::get('/blade', [BladeController::class, 'index'])->name('blade.index');
+
+use App\Http\Controllers\BoardController;
+Route::resource('/board', BoardController::class);
