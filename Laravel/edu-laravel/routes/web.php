@@ -175,4 +175,4 @@ use App\Http\Controllers\BladeController;
 Route::get('/blade', [BladeController::class, 'index'])->name('blade.index');
 
 use App\Http\Controllers\BoardController;
-Route::resource('/board', BoardController::class);
+Route::resource('/board', BoardController::class); //컨트롤러 안에 메소드들 다 적혀있음
