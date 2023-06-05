@@ -4,7 +4,7 @@
 // 	async & await는 promise를 기반으로 동작합니다.
 
 
-// 2. async
+// 2. async 
 // 동기 처리
 // function delay() {
 // 	const delayTime = Date.now() + 2000;
