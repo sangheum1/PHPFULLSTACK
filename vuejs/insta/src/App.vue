@@ -10,6 +10,7 @@
         <img class="logo" alt="Vue logo" src="./assets/logo.png">
       </li>
       <li v-if="$store.state.tabFlg == 1" @click="$store.commit('changeTabFlg', 2)" class="header-button header-button-right">다음</li>
+      <li v-if="$store.state.tabFlg == 2" @click="$store.dispatch('writeContent');" class="header-button header-button-right">작성</li>
     </ul>
   </div>
   <!-- 컨텐츠 -->
@@ -41,8 +42,10 @@ export default {
     updating(e) {
       let file = e.target.files;
       let imgUrl = URL.createObjectURL(file[0]);
+      // mutations는 commit로 접근
       this.$store.commit('changeImgUrl', imgUrl);
       this.$store.commit('changeTabFlg', 1);
+      this.$store.commit('changePostImg', file[0]);
       e.target.value = "";
     }
   },
@@ -50,7 +53,7 @@ export default {
     ContainerComponent,
   }
 }
-</script>
+</script> 
 
 <style>
 @import url('./assets/css/common.css');

@@ -16,7 +16,7 @@
 
     <!-- 글 작성 -->
     <div v-if="$store.state.tabFlg == 2">
-        <div class="upload-img" :style="{backgroundImage : `url('${$store.state.imgUrl}')`}"></div>
+        <div class="upload-img" :class="$store.state.filter" :style="{backgroundImage : `url('${$store.state.imgUrl}')`}"></div>
         <div>
             <textarea class="write-box" name="content" id="content">글 쓰세요</textarea>
         </div>
