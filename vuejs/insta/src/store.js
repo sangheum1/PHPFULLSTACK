@@ -1,6 +1,5 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
-
 const store = createStore({
     // 데이터 사용 영역
     state() {
