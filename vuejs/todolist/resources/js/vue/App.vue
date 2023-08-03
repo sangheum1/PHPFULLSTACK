@@ -1,66 +1,97 @@
 <template>
-    <div>
-        <Todo @insert="createList()"></Todo>
-        <List @delete="deleteList()" @select="getList()" :todo="data"></List>
-    </div>
+	<div class="container">
+		<div class="header">
+			<h2 class="title">Todo List</h2>
+			<div class="store">
+				<input type="text" placeholder="할 일을 적어주세요." v-model="content">
+				<button @click="storeItem()" class="btn-store">등록</button>
+			</div>
+		</div>
+
+		<ListComponent
+			:item="item"
+			v-for="item in items" :key="item"
+			@changeItem="getItems()"
+		></ListComponent>
+	</div>
 </template>
 <script>
-import List from "./components/List.vue";
-import Todo from "./components/Todo.vue";
+import ListComponent from './ListComponent.vue';
 
 export default {
-    name: 'App',
-    data() {
-        return {
-            data: null,
-        }
-    },
-    created() {
-        this.getList();
-    },
-    methods:{
-        getList() {
-            axios.get('http://localhost:8000/api/items')
-            .then(res=> {
-                console.log('성공 했음');
-                // context가 store을 가리킴
-                console.log(res.data);
-                this.data = res
-                .data;
-            })
-            .catch( err=> {
-                console.log(err, '실패')
-            })
-        },
-        createList() {
-            // const header = {
-            //     headers: {
-            //         'Content-Type' : 'application/json'
-            //     }
-            // }
-            const data = {
-                "item":
-            {
-                "content" : document.getElementById('content').value
-            }
-            }
-            axios.post('http://localhost:8000/api/items', data)
-            .then(res => {
-                console.log('insert 성공');
-                // res.status // http 코드 확인(200,404,500)
-                this.data.unshift(res.data);
-                document.getElementById('content').value = "";
-            })
-        },
-        
-    },
-    components: {
-        List,
-        Todo
-    }
+	name: 'App',
+	data() {
+		return {
+			items: null,
+			content: '',
+		}
+	},
+	methods: {
+		// 전 List 획득
+		getItems() {
+			axios.get('/api/items')
+			.then( res => {
+				if(res.status == 200) {
+					this.items = res.data;
+				}			
+			})
+			.catch( err => {
+				console.log(err);
+			});
+		},
+		// List 작성
+		storeItem() {
+			let data = {
+				"item": {
+					"content": this.content,
+				}
+			}
+			let headers = {
+				"Content-Type": "application/json",
+			}
+			axios.post('/api/items', data, headers)
+			.then( res => {
+				if(res.status == 201) {
+					this.items.unshift(res.data);
+					this.content = '';
+				}
+			})
+			.catch( err => {
+				console.log(err);
+			});
+		}
+	},
+	components: {
+		ListComponent,
+	},
+	created() {
+		this.getItems();
+	}
 }
-
 </script>
-<style>
-    
+<style scoped>
+input {
+	outline: none;
+	margin: 5px;
+	width: 70%;
+}
+.container {
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+}
+.header {
+	background: black;
+	padding: 5px;
+	color: white;
+}
+.title {
+	text-align: center;
+}
+.store {
+	text-align: center;
+}
+.btn-store {
+	border-radius: 20px;
+}
 </style>

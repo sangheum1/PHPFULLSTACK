@@ -1,6 +1,6 @@
 <template>
     <div v-for="(item,i) in todo" :key="i">
-        <input type="checkbox" id="{{ item.id }}" @click="updateCheck( item.id )" v-if="item.completed == true ? checked : null "  v>
+        <input :class="{check}" type="checkbox" id="{{ item.id }}" @click="updateCheck( item )">
         <div>{{ item.content }}</div>
         <!-- {{ i }} -->
         <button type="button" @click="deleteList( item.id ); $emit('select')">삭제</button>
@@ -15,7 +15,7 @@ export default {
     },
     data() {
         return {
-            check: false,
+            check: display,
         }
     },
     methods:{
@@ -44,7 +44,8 @@ export default {
             }
             axios.put('http://localhost:8000/api/items/' + i, data, header)
             .then(res => {
-                console.log(res);
+                console.log('update 성공');
+                console.log(res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -55,5 +56,7 @@ export default {
 }
 </script>
 <style>
-    
+    .display{
+        text-decoration: line-through;
+    }
 </style>

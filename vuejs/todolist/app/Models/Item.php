@@ -10,12 +10,12 @@ class Item extends Model
 {
     use HasFactory;
 
-    // type cast
+    // 타입 케스트
     protected $casts = [
         'completed' => 'boolean',
     ];
 
-    // completed_at을 데이트 설정에 추가
+    // completed_at를 데이트 설정에 추가
     protected $dates = [
         'completed_at',
     ];

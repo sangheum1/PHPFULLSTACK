@@ -39,15 +39,8 @@ class ItemController extends Controller
         $result = new Item;
         $result->content = $request->item["content"];
         $result->save();
-        return $result;
 
-        // 데이터 보내는 방식
-        // {
-        //     "item": {
-        //         "content": "내용내용",
-        //         "completed": true,
-        //     }
-        // }
+        return $result;
     }
 
     /**
@@ -82,6 +75,7 @@ class ItemController extends Controller
     public function update(Request $request, $id)
     {
         $result = Item::find($id);
+
         if($result) {
             $result->completed = $request->item["completed"] ? true : false;
             $result->completed_at = $request->item["completed"] ? Carbon::now() : null;
@@ -89,7 +83,7 @@ class ItemController extends Controller
             return $result;
         }
 
-        return 'No Data';
+        return 'No Data.';
     }
 
     /**
@@ -100,13 +94,13 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        var_dump($id);
         $result = Item::find($id);
-
+        
         if($result) {
             $result->delete();
-            return 'successfully Delete';
+            return 'Successfully Deleted.';
         }
-        return 'No Data';
+
+        return 'No Data.';
     }
 }
